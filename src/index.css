@@ -126,6 +126,11 @@ img {
     margin-bottom: 1.5rem;
 }
 
+.experience__details-icon{
+    margin-top: 6px;
+    color: var(--color-primary);
+}
+
 
 @media screen and (max-width: 1024px) {
     .container {

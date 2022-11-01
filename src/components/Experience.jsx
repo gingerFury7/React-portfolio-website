@@ -12,29 +12,39 @@ const Experience = () => {
           <h3>Frontend Development</h3>
           <ExpContent>
             <ExpDetails>
-              <AiOutlineCheckCircle />
-              <h4>HTML</h4>
-              <small className="text-light">Experienced</small>
+              <AiOutlineCheckCircle className="experience__details-icon" />
+              <div>
+                <h4>HTML</h4>
+                <small className="text-light">Experienced</small>
+              </div>
             </ExpDetails>
             <ExpDetails>
-              <AiOutlineCheckCircle />
-              <h4>CSS</h4>
-              <small className="text-light">Intermediate</small>
+              <AiOutlineCheckCircle className="experience__details-icon" />
+              <div>
+                <h4>CSS</h4>
+                <small className="text-light">Intermediate</small>
+              </div>
             </ExpDetails>
             <ExpDetails>
-              <AiOutlineCheckCircle />
-              <h4>TypeScript</h4>
-              <small className="text-light">Intermediate</small>
+              <AiOutlineCheckCircle className="experience__details-icon" />
+              <div>
+                <h4>TypeScript</h4>
+                <small className="text-light">Intermediate</small>
+              </div>
             </ExpDetails>
             <ExpDetails>
-              <AiOutlineCheckCircle />
-              <h4>Mobx</h4>
-              <small className="text-light">Experienced</small>
+              <AiOutlineCheckCircle className="experience__details-icon" />
+              <div>
+                <h4>Mobx</h4>
+                <small className="text-light">Experienced</small>
+              </div>
             </ExpDetails>
             <ExpDetails>
-              <AiOutlineCheckCircle />
-              <h4>React</h4>
-              <small className="text-light">Experienced</small>
+              <AiOutlineCheckCircle className="experience__details-icon" />
+              <div>
+                <h4>React</h4>
+                <small className="text-light">Experienced</small>
+              </div>
             </ExpDetails>
           </ExpContent>
         </ExpFront>
@@ -47,10 +57,39 @@ export default Experience;
 
 const ExperienceWrapper = styled.section``;
 
-const ExperienceContainer = styled.div``;
+const ExperienceContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1.5fr;
+  justify-items: center;
+`;
 
-const ExpFront = styled.div``;
+const ExpFront = styled.div`
+  background-color: var(--color-bg-variant);
+  padding: 2.4rem 5rem;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  transition: var(--transition);
 
-const ExpContent = styled.div``;
+  &:hover {
+    background-color: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+  }
 
-const ExpDetails = styled.article``;
+  & h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+  }
+`;
+
+const ExpContent = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+`;
+
+const ExpDetails = styled.article`
+  display: flex;
+  gap: 1rem;
+`;
