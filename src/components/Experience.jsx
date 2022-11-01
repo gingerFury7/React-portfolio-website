@@ -7,7 +7,7 @@ const Experience = () => {
     <ExperienceWrapper id="experience">
       <h5>What Skills I Have</h5>
       <h2>My Experience</h2>
-      <ExperienceContainer>
+      <ExperienceContainer className="container">
         <ExpFront>
           <h3>Frontend Development</h3>
           <ExpContent>
@@ -59,7 +59,7 @@ const ExperienceWrapper = styled.section``;
 
 const ExperienceContainer = styled.div`
   display: grid;
-  grid-template-columns: 1.5fr;
+  grid-template-columns: 1fr;
   justify-items: center;
 `;
 
@@ -69,6 +69,8 @@ const ExpFront = styled.div`
   border: 1px solid transparent;
   border-radius: 2rem;
   transition: var(--transition);
+  margin: 0 auto;
+  width: 70%;
 
   &:hover {
     background-color: transparent;
@@ -81,12 +83,28 @@ const ExpFront = styled.div`
     margin-bottom: 2rem;
     color: var(--color-primary);
   }
+
+  @media screen and (max-width: 1024px) {
+    width: 90%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+  }
 `;
 
 const ExpContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 2rem;
+
+  @media screen and (max-width: 1024px) {
+    padding: 1rem;
+  }
 `;
 
 const ExpDetails = styled.article`
