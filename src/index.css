@@ -114,6 +114,11 @@ img {
     object-fit: cover;
 }
 
+.active-nav-item {
+    background-color: var(--color-bg) !important;
+    color: var(--color-white) !important;
+  }
+
 
 @media screen and (max-width: 1024px) {
     .container{
