@@ -36,4 +36,8 @@ const HeaderSocialsClass = styled.div`
     height: 2rem;
     background-color: var(--color-primary);
   }
+
+  @media screen and (max-width: 600px) {
+    display: none; 
+  }
 `;
