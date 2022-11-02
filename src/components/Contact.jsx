@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import { AiOutlineMail, AiOutlineWhatsApp } from "react-icons/ai";
 import { FaTelegramPlane } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_5sk3e0o",
+        "template_g533gjq",
+        form.current,
+        "OJENSqLL1MSqI7wvN"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <section id="contact">
       <h5>Get In Touch</h5>
@@ -35,21 +58,21 @@ const Contact = () => {
             </a>
           </ContactOptionsItem>
         </ContactOptions>
-        <ContactForm>
+        <ContactForm ref={form} onSubmit={sendEmail}>
           <ContactFormInput
-            name="name"
+            name="from_name"
             type="text"
             placeholder="Your Full Name"
             required
           />
           <ContactFormInput
             type="email"
-            name="email"
+            name="from_email"
             placeholder="Your Email"
             required
           />
           <ContactFromTxtArea
-            name="message"
+            name="data"
             rows="7"
             placeholder="Your Message"
             required
@@ -70,6 +93,15 @@ const ContactContainer = styled.div`
   display: grid;
   grid-template-columns: 30% 58%;
   gap: 12%;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: var(--container-width-sm);
+  }
 `;
 
 const ContactOptions = styled.div`
