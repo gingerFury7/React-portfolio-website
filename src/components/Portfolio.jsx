@@ -18,96 +18,108 @@ const Portfolio = () => {
             <img src={IMG1} alt="" />
           </PortfolioItemIMG>
           <h3>Portfolio Title</h3>
-          <a href="https://github.com" className="btn" target="_blank">
-            Github
-          </a>
-          <a
-            href="https://dribbble.com/Alien_pixels"
-            className="btn btn-primary"
-            target="_blank"
-          >
-            Live Demo
-          </a>
+          <PortfolioItemCTA>
+            <a href="https://github.com" className="btn" target="_blank">
+              Github
+            </a>
+            <a
+              href="https://dribbble.com/Alien_pixels"
+              className="btn btn-primary"
+              target="_blank"
+            >
+              Live Demo
+            </a>
+          </PortfolioItemCTA>
         </PortfolioItem>
         <PortfolioItem>
           <PortfolioItemIMG>
             <img src={IMG1} alt="" />
           </PortfolioItemIMG>
           <h3>Portfolio Title</h3>
-          <a href="https://github.com" className="btn" target="_blank">
-            Github
-          </a>
-          <a
-            href="https://dribbble.com/Alien_pixels"
-            className="btn btn-primary"
-            target="_blank"
-          >
-            Live Demo
-          </a>
+          <PortfolioItemCTA>
+            <a href="https://github.com" className="btn" target="_blank">
+              Github
+            </a>
+            <a
+              href="https://dribbble.com/Alien_pixels"
+              className="btn btn-primary"
+              target="_blank"
+            >
+              Live Demo
+            </a>
+          </PortfolioItemCTA>
         </PortfolioItem>
         <PortfolioItem>
           <PortfolioItemIMG>
             <img src={IMG1} alt="" />
           </PortfolioItemIMG>
           <h3>Portfolio Title</h3>
-          <a href="https://github.com" className="btn" target="_blank">
-            Github
-          </a>
-          <a
-            href="https://dribbble.com/Alien_pixels"
-            className="btn btn-primary"
-            target="_blank"
-          >
-            Live Demo
-          </a>
+          <PortfolioItemCTA>
+            <a href="https://github.com" className="btn" target="_blank">
+              Github
+            </a>
+            <a
+              href="https://dribbble.com/Alien_pixels"
+              className="btn btn-primary"
+              target="_blank"
+            >
+              Live Demo
+            </a>
+          </PortfolioItemCTA>
         </PortfolioItem>
         <PortfolioItem>
           <PortfolioItemIMG>
             <img src={IMG1} alt="" />
           </PortfolioItemIMG>
           <h3>Portfolio Title</h3>
-          <a href="https://github.com" className="btn" target="_blank">
-            Github
-          </a>
-          <a
-            href="https://dribbble.com/Alien_pixels"
-            className="btn btn-primary"
-            target="_blank"
-          >
-            Live Demo
-          </a>
+          <PortfolioItemCTA>
+            <a href="https://github.com" className="btn" target="_blank">
+              Github
+            </a>
+            <a
+              href="https://dribbble.com/Alien_pixels"
+              className="btn btn-primary"
+              target="_blank"
+            >
+              Live Demo
+            </a>
+          </PortfolioItemCTA>
         </PortfolioItem>
         <PortfolioItem>
           <PortfolioItemIMG>
             <img src={IMG1} alt="" />
           </PortfolioItemIMG>
           <h3>Portfolio Title</h3>
-          <a href="https://github.com" className="btn" target="_blank">
-            Github
-          </a>
-          <a
-            href="https://dribbble.com/Alien_pixels"
-            className="btn btn-primary"
-            target="_blank"
-          >
-            Live Demo
-          </a>
+          <PortfolioItemCTA>
+            <a href="https://github.com" className="btn" target="_blank">
+              Github
+            </a>
+            <a
+              href="https://dribbble.com/Alien_pixels"
+              className="btn btn-primary"
+              target="_blank"
+            >
+              Live Demo
+            </a>
+          </PortfolioItemCTA>
         </PortfolioItem>
         <PortfolioItem>
           <PortfolioItemIMG>
             <img src={IMG1} alt="" />
           </PortfolioItemIMG>
           <h3>Portfolio Title</h3>
-          <a href="https://github.com" className="btn" target="_blank">
-            Github
-          </a>
-          <a
-            href="https://dribbble.com/Alien_pixels"
-            className="btn btn-primary"
-            target="_blank"
-          >
-            Live Demo
-          </a>
+          <PortfolioItemCTA>
+            <a href="https://github.com" className="btn" target="_blank">
+              Github
+            </a>
+            <a
+              href="https://dribbble.com/Alien_pixels"
+              className="btn btn-primary"
+              target="_blank"
+            >
+              Live Demo
+            </a>
+          </PortfolioItemCTA>
         </PortfolioItem>
       </PortfilioContainer>
     </section>
@@ -116,8 +128,36 @@ const Portfolio = () => {
 
 export default Portfolio;
 
-const PortfilioContainer = styled.div``;
+const PortfilioContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+`;
 
-const PortfolioItem = styled.article``;
+const PortfolioItem = styled.article`
+  background: var(--color-bg-variant);
+  padding: 1.2rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
 
-const PortfolioItemIMG = styled.div``;
+  &:hover {
+    border-color: var(--color-pranary-variant);
+    background: transparent;
+  }
+
+  & h3 {
+    margin: 1.2rem 0 2rem;
+  }
+`;
+
+const PortfolioItemIMG = styled.div`
+  border-radius: 1.5rem;
+  overflow: hidden;
+`;
+
+const PortfolioItemCTA = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+`;
