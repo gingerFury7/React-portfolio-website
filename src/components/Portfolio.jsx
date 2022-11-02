@@ -100,7 +100,7 @@ const PortfolioItem = styled.article`
   transition: var(--transition);
 
   &:hover {
-    border-color: var(--color-pranary-variant);
+    border-color: var(--color-primary-variant);
     background: transparent;
   }
 

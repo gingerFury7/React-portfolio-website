@@ -136,6 +136,10 @@ img {
     margin-top:   2px;
 }
 
+.contact__option-icon{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
 
 @media screen and (max-width: 1024px) {
     .container {
