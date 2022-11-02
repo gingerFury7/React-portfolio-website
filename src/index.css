@@ -131,6 +131,11 @@ img {
     color: var(--color-primary);
 }
 
+.service__list-icon{
+    color: var(--color-primary);
+    margin-top:   2px;
+}
+
 
 @media screen and (max-width: 1024px) {
     .container {
