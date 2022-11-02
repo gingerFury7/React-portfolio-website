@@ -1,0 +1,24 @@
+.testimonials__container {
+    width: 40%
+}
+
+.testimonials__article{
+    background: var(--color-bg-variant);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 2rem;
+    user-select: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .testimonials__container {
+        width: 60%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .testimonials__container {
+        width: var(--container-width-sm);
+    }
+}
