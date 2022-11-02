@@ -63,6 +63,7 @@ const NavWrapper = styled.nav`
   gap: 0.8rem;
   border-radius: 3rem;
   backdrop-filter: blur(15px);
+  z-index: 100;
 `;
 
 const NavEl = styled.a`
@@ -75,10 +76,5 @@ const NavEl = styled.a`
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.3);
-  }
-
-  .active {
-    background-color: var(--color-bg);
-    color: var(--color-white);
   }
 `;
