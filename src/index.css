@@ -116,8 +116,8 @@ img {
 }
 
 .active-nav-item {
-    background-color: var(--color-bg) !important;
-    color: var(--color-white) !important;
+    background-color: var(--color-primary) !important;
+    color: var(--color-bg) !important;
 }
 
 .about__icon{
