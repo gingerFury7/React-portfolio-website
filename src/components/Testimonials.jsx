@@ -14,44 +14,50 @@ const Testimonials = () => {
         <TestiArticle>
           <ClientAvatar>
             <img src={AVTR1} alt="client-avatar" />
-            <ClientsName>Dan Vornovitskii</ClientsName>
-            <ClientsReview>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam hic
-              laudantium dolores, provident architecto amet laborum dolorum
-              inventore alias quia dignissimos aut, dolorem, ullam repellendus
-              corporis autem temporibus facilis mollitia?
-            </ClientsReview>
           </ClientAvatar>
+          <ClientsName>Dan Vornovitskii</ClientsName>
+          <ClientsReview>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam hic
+            laudantium dolores, provident architecto amet laborum dolorum
+            inventore alias quia dignissimos aut, dolorem, ullam repellendus
+            corporis autem temporibus facilis mollitia?
+          </ClientsReview>
+        </TestiArticle>
+        <TestiArticle>
           <ClientAvatar>
             <img src={AVTR1} alt="client-avatar" />
-            <ClientsName>Dan Vornovitskii</ClientsName>
-            <ClientsReview>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam hic
-              laudantium dolores, provident architecto amet laborum dolorum
-              inventore alias quia dignissimos aut, dolorem, ullam repellendus
-              corporis autem temporibus facilis mollitia?
-            </ClientsReview>
           </ClientAvatar>
+          <ClientsName>Dan Vornovitskii</ClientsName>
+          <ClientsReview>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam hic
+            laudantium dolores, provident architecto amet laborum dolorum
+            inventore alias quia dignissimos aut, dolorem, ullam repellendus
+            corporis autem temporibus facilis mollitia?
+          </ClientsReview>
+        </TestiArticle>
+        <TestiArticle>
           <ClientAvatar>
             <img src={AVTR1} alt="client-avatar" />
-            <ClientsName>Dan Vornovitskii</ClientsName>
-            <ClientsReview>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam hic
-              laudantium dolores, provident architecto amet laborum dolorum
-              inventore alias quia dignissimos aut, dolorem, ullam repellendus
-              corporis autem temporibus facilis mollitia?
-            </ClientsReview>
           </ClientAvatar>
+          <ClientsName>Dan Vornovitskii</ClientsName>
+          <ClientsReview>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam hic
+            laudantium dolores, provident architecto amet laborum dolorum
+            inventore alias quia dignissimos aut, dolorem, ullam repellendus
+            corporis autem temporibus facilis mollitia?
+          </ClientsReview>
+        </TestiArticle>
+        <TestiArticle>
           <ClientAvatar>
             <img src={AVTR1} alt="client-avatar" />
-            <ClientsName>Dan Vornovitskii</ClientsName>
-            <ClientsReview>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam hic
-              laudantium dolores, provident architecto amet laborum dolorum
-              inventore alias quia dignissimos aut, dolorem, ullam repellendus
-              corporis autem temporibus facilis mollitia?
-            </ClientsReview>
           </ClientAvatar>
+          <ClientsName>Dan Vornovitskii</ClientsName>
+          <ClientsReview>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam hic
+            laudantium dolores, provident architecto amet laborum dolorum
+            inventore alias quia dignissimos aut, dolorem, ullam repellendus
+            corporis autem temporibus facilis mollitia?
+          </ClientsReview>
         </TestiArticle>
       </TestimonialsContainer>
     </section>
@@ -60,12 +66,33 @@ const Testimonials = () => {
 
 export default Testimonials;
 
-const TestimonialsContainer = styled.div``;
+const TestimonialsContainer = styled.div`
+  width: 40%;
+`;
 
-const TestiArticle = styled.article``;
+const TestiArticle = styled.article`
+  background: var(--color-bg-variant);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  user-select: none;
+`;
 
-const ClientAvatar = styled.div``;
+const ClientAvatar = styled.div`
+  width: 4rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  border: 0.4rem solid var(--color-primary-variant);
+`;
 
 const ClientsName = styled.h5``;
 
-const ClientsReview = styled.small``;
+const ClientsReview = styled.small`
+  color: var(--color-light);
+  font-weight: 300;
+  display: block;
+  width: 80%;
+  margin: 0.8rem auto 0;
+`;
