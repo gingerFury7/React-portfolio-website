@@ -1,5 +1,6 @@
 .testimonials__container {
-    width: 40%
+    width: 40% !important;
+    padding-bottom: 4rem !important;
 }
 
 .testimonials__article{
@@ -10,15 +11,19 @@
     user-select: none;
 }
 
+.swiper-pagination-clickable .swiper-pagination-bullet{
+    background: var(--color-primary);
+}
+
 @media screen and (max-width: 1024px) {
     .testimonials__container {
-        width: 60%;
+    width: 60% !important;
     }
 }
 
 
 @media screen and (max-width: 600px) {
     .testimonials__container {
-        width: var(--container-width-sm);
+        width: var(--container-width-sm) !important;
     }
 }
